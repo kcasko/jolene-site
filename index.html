@@ -17,9 +17,30 @@
             min-height: 100vh;
             color: #e8dcc4;
             overflow-x: hidden;
+            position: relative;
         }
 
+        /* Atmospheric texture layer - paper grain, sparse celestial dust, blurred collage shapes */
         body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                /* Sparse large blurred circles suggesting distant celestial forms */
+                radial-gradient(ellipse 800px 600px at 15% 20%, rgba(200,190,220,0.03), transparent 50%),
+                radial-gradient(ellipse 1000px 700px at 85% 75%, rgba(180,170,200,0.02), transparent 50%),
+                /* Faint paper grain noise via small repeating gradients */
+                repeating-radial-gradient(circle at 0 0, transparent 0, rgba(255,250,205,0.015) 1px, transparent 2px),
+                /* Abstract collage scrap shapes - large scale, heavily blurred */
+                radial-gradient(circle 400px at 70% 40%, rgba(255,245,220,0.02), transparent),
+                radial-gradient(ellipse 500px 300px at 30% 65%, rgba(210,200,230,0.025), transparent);
+            background-size: 100% 100%, 100% 100%, 4px 4px, 100% 100%, 100% 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Twinkling stars layer - above texture, below moon */
+        body::after {
             content: '';
             position: fixed;
             inset: 0;
@@ -31,15 +52,16 @@
             z-index: 1;
         }
 
+        /* Moon - repositioned higher and farther right, reduced glow */
         .moon {
             position: fixed;
-            top: 8%;
-            right: 12%;
+            top: 4%;
+            right: 5%;
             width: 120px;
             height: 120px;
             background: radial-gradient(circle at 35% 35%, #fffacd, #f4f1de 60%, #d4c5b0);
             border-radius: 50%;
-            box-shadow: 0 0 60px rgba(255,250,205,0.4);
+            box-shadow: 0 0 60px rgba(255,250,205,0.25);
             animation: float 8s ease-in-out infinite;
             z-index: 2;
         }
