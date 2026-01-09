@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolene Casko - Digital Collage Artist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="moon"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Jolene Casko</h1>
+            <p class="subtitle">Digital Collage Artist & Surreal Creator</p>
+            <p class="bio">
+                Creating surreal digital collages inspired by music, poetry, and emotions since 2003. 
+                Specializing in album art and dreamlike visual narratives that blend vintage aesthetics 
+                with cosmic wonder. Based in Pennsylvania.
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Years Creating</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Pieces Created</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Happy Clients</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">✨ Featured Work ✨</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/499224803_1298277118970954_217332104034590816_n.jpg" alt="Lunar Dreams" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Lunar Dreams</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/504832693_1315643813900951_7295640018996093784_n.jpg" alt="Rose Garden" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Rose Garden</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/518043519_1347303007401698_1369059919729502128_n.jpg" alt="Metamorphosis" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Metamorphosis</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/526989708_1365785275553471_2217496400386426939_n.jpg" alt="Cosmic Ocean" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Cosmic Ocean</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/555083929_1415827430549255_2308349470188256460_n.jpg" alt="Stardust" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Stardust</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/577045367_1454099106722087_8385517091408693551_n.jpg" alt="Symphony" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="gallery-caption">Symphony</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="about-section">
+            <h3>About My Work</h3>
+            <p>
+                I made my first collage 20 years ago at age 12, and have been in love with the art form ever since. 
+                What started with magazine clippings has evolved into digital masterpieces created in Photoshop, where I can 
+                layer emotions as intricately as the images themselves.
+            </p>
+            <p>
+                My favorite way to create is by turning on music, letting a song evoke emotion within me, and then creating 
+                a surreal scene that expresses that emotion. Collage is the perfect art form because the art is made of layers 
+                upon layers, just as emotions are.
+            </p>
+            
+            <h3 style="margin-top: 30px;">My Creative Process</h3>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-number">1</div>
+                    <div class="process-title">Listen</div>
+                    <div class="process-desc">Immerse in music or poetry</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">2</div>
+                    <div class="process-title">Visualize</div>
+                    <div class="process-desc">Let emotions guide vision</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">3</div>
+                    <div class="process-title">Layer</div>
+                    <div class="process-desc">Blend elements in Photoshop</div>
+                </div>
+                <div class="process-step">
+                    <div class="process-number">4</div>
+                    <div class="process-title">Refine</div>
+                    <div class="process-desc">Perfect each piece</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">💬 Client Love 💬</h2>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Jolene's artwork perfectly captured the essence of our album. Her ability to translate music into 
+                    visual art is truly remarkable. The collage she created became iconic for our band."
+                </p>
+                <div class="testimonial-author">Sarah Mitchell</div>
+                <div class="testimonial-role">Indie Musician</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "Working with Jolene was a dream. She understood our vision immediately and delivered something even 
+                    more beautiful than we imagined. Her surreal style is exactly what our project needed."
+                </p>
+                <div class="testimonial-author">Marcus Chen</div>
+                <div class="testimonial-role">Electronic Producer</div>
+            </div>
+            <div class="testimonial">
+                <p class="testimonial-text">
+                    "The attention to detail and emotional depth in Jolene's work is unmatched. She doesn't just create 
+                    art—she creates feelings. Highly recommend for any creative project."
+                </p>
+                <div class="testimonial-author">Emily Rodriguez</div>
+                <div class="testimonial-role">Art Director</div>
+            </div>
+        </div>
+
+        <div class="commission-info">
+            <div style="text-align: center;">
+                <div class="commission-status">✂ COMMISSIONS OPEN ✂</div>
+                <h2 class="section-title" style="margin-bottom: 10px;">Work With Me</h2>
+                <p style="color: #d9cbe5; font-size: 1.05em; margin-bottom: 15px;">
+                    Whether you need album art, custom collages, or unique digital pieces.
+                </p>
+            </div>
+
+            <div class="commission-grid">
+                <div class="commission-tier">
+                    <div class="tier-name">Single Artwork</div>
+                    <div class="tier-price">$150+</div>
+                    <ul class="tier-features">
+                        <li>Custom digital collage</li>
+                        <li>High-resolution files</li>
+                        <li>2 revision rounds</li>
+                        <li>Commercial rights</li>
+                        <li>1-2 week turnaround</li>
+                    </ul>
+                </div>
+                <div class="commission-tier">
+                    <div class="tier-name">Album Art</div>
+                    <div class="tier-price">$300+</div>
+                    <ul class="tier-features">
+                        <li>Album cover design</li>
+                        <li>Back cover layout</li>
+                        <li>Social media versions</li>
+                        <li>3 revision rounds</li>
+                        <li>2-3 week turnaround</li>
+                    </ul>
+                </div>
+                <div class="commission-tier">
+                    <div class="tier-name">Custom Project</div>
+                    <div class="tier-price">Quote</div>
+                    <ul class="tier-features">
+                        <li>Series of artworks</li>
+                        <li>NFT collections</li>
+                        <li>Brand collaborations</li>
+                        <li>Editorial work</li>
+                        <li>Timeline varies</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <h3>✉️ Stay Updated ✉️</h3>
+            <p>Get notified about new collections, commission openings, and exclusive drops.</p>
+            <form class="newsletter-form" onsubmit="alert('Newsletter signup coming soon!'); return false;">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="newsletter-button">Subscribe</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title">🌐 Find Me Online 🌐</h2>
+            <div class="platforms">
+                <a href="https://www.instagram.com/jolenecasko/" class="platform-link" target="_blank">
+                    <div class="platform-icon">📷</div>
+                    <div>
+                        <div class="platform-name">Instagram</div>
+                        <div class="platform-desc">@jolenecasko • Latest artwork & updates</div>
+                    </div>
+                </a>
+                <a href="https://www.behance.net/jolenecasko" class="platform-link" target="_blank">
+                    <div class="platform-icon">🎨</div>
+                    <div>
+                        <div class="platform-name">Behance</div>
+                        <div class="platform-desc">Portfolio showcase • 20+ years of work</div>
+                    </div>
+                </a>
+                <a href="https://foundation.app/@jolenecasko" class="platform-link" target="_blank">
+                    <div class="platform-icon">🌙</div>
+                    <div>
+                        <div class="platform-name">Foundation</div>
+                        <div class="platform-desc">Premium NFT artwork & collectibles</div>
+                    </div>
+                </a>
+                <a href="https://opensea.io/jolenecasko" class="platform-link" target="_blank">
+                    <div class="platform-icon">🌊</div>
+                    <div>
+                        <div class="platform-name">OpenSea</div>
+                        <div class="platform-desc">NFT marketplace collections</div>
+                    </div>
+                </a>
+                <a href="https://makersplace.com/marketplace/jolenecasko/" class="platform-link" target="_blank">
+                    <div class="platform-icon">🏛️</div>
+                    <div>
+                        <div class="platform-name">MakersPlace</div>
+                        <div class="platform-desc">Curated digital art pieces</div>
+                    </div>
+                </a>
+                <a href="https://twitter.com/jolenecasko" class="platform-link" target="_blank">
+                    <div class="platform-icon">🐦</div>
+                    <div>
+                        <div class="platform-name">Twitter / X</div>
+                        <div class="platform-desc">@jolenecasko • Creative process & thoughts</div>
+                    </div>
+                </a>
+                <a href="https://www.redbubble.com/people/jolenecasko/shop" class="platform-link" target="_blank">
+                    <div class="platform-icon">🛍️</div>
+                    <div>
+                        <div class="platform-name">Redbubble</div>
+                        <div class="platform-desc">Prints, apparel & merchandise</div>
+                    </div>
+                </a>
+                <a href="https://displate.com/artist/jollykoala" class="platform-link" target="_blank">
+                    <div class="platform-icon">🖼️</div>
+                    <div>
+                        <div class="platform-name">Displate</div>
+                        <div class="platform-desc">Metal art prints</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">Ready to create something extraordinary together?</p>
+            <div class="cta-buttons">
+                <a href="mailto:jolenecasko@gmail.com" class="cta-button">Commission Work</a>
+                <a href="https://www.instagram.com/jolenecasko/" class="cta-button" target="_blank">Follow Journey</a>
+            </div>
+        </div>
+
+        <p class="artist-note">
+            "Collage is the perfect art form because the art is made of layers upon layers, just as emotions are." — Jolene
+        </p>
+    </div>
+</body>
+</html>
