@@ -4,679 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jolene Casko - Digital Collage Artist</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        @keyframes starTwinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 0.8; } }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-
-        body {
-            font-family: Georgia, serif;
-            background: linear-gradient(180deg, #0f1419 0%, #1a1529 30%, #2d1b3d 70%, #3a2449 100%);
-            min-height: 100vh;
-            color: #e8dcc4;
-            overflow-x: hidden;
-            position: relative;
-        }
-
-        /* Atmospheric texture layer - paper grain, sparse celestial dust, blurred collage shapes */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image:
-                /* Large blurred collage scrap shapes - indistinct and abstract */
-                radial-gradient(ellipse 1400px 900px at 18% 25%, rgba(210,200,230,0.025), transparent 60%),
-                radial-gradient(ellipse 1600px 1100px at 82% 70%, rgba(195,185,215,0.02), transparent 65%),
-                /* Micro-scale faint moons scattered across canvas */
-                radial-gradient(circle 2px at 23% 15%, rgba(255,250,205,0.04), transparent),
-                radial-gradient(circle 3px at 67% 38%, rgba(240,235,210,0.035), transparent),
-                radial-gradient(circle 2px at 41% 82%, rgba(230,225,200,0.03), transparent),
-                /* Vintage paper grain noise at very low opacity */
-                repeating-radial-gradient(circle at 0 0, transparent 0, rgba(255,250,205,0.012) 1px, transparent 3px);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 5px 5px;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Twinkling stars layer - above texture, below moon */
-        body::after {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: radial-gradient(2px 2px at 20% 30%, rgba(255,250,205,0.4), transparent),
-                              radial-gradient(1px 1px at 80% 70%, rgba(255,250,205,0.3), transparent),
-                              radial-gradient(1px 1px at 50% 50%, rgba(255,250,205,0.5), transparent);
-            animation: starTwinkle 6s ease-in-out infinite;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Moon - repositioned higher and farther right, reduced glow */
-        .moon {
-            position: fixed;
-            top: 4%;
-            right: 5%;
-            width: 120px;
-            height: 120px;
-            background: radial-gradient(circle at 35% 35%, #fffacd, #f4f1de 60%, #d4c5b0);
-            border-radius: 50%;
-            box-shadow: 0 0 60px rgba(255,250,205,0.25);
-            animation: float 8s ease-in-out infinite;
-            z-index: 2;
-        }
-
-        /* Background visual elements container */
-        .bg-elements {
-            position: fixed;
-            inset: 0;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Celestial bodies with subtle character - Mellon Collie inspired */
-        .celestial {
-            position: absolute;
-            pointer-events: none;
-            opacity: 0.35;
-        }
-
-        /* Star with subtle rays */
-        .celestial-1 {
-            width: 65px;
-            height: 65px;
-            top: 18%;
-            left: 10%;
-            background:
-                radial-gradient(circle at 50% 50%, rgba(255,250,205,0.3) 0%, transparent 40%),
-                conic-gradient(from 0deg,
-                    transparent 20%, rgba(255,250,205,0.15) 22.5%, transparent 25%,
-                    transparent 45%, rgba(255,250,205,0.15) 47.5%, transparent 50%,
-                    transparent 70%, rgba(255,250,205,0.15) 72.5%, transparent 75%,
-                    transparent 95%, rgba(255,250,205,0.15) 97.5%, transparent 100%);
-        }
-
-        /* Crescent moon shape */
-        .celestial-2 {
-            width: 45px;
-            height: 45px;
-            top: 55%;
-            right: 15%;
-            background: radial-gradient(circle at 30% 30%, rgba(230,220,210,0.4), rgba(210,200,190,0.2) 70%, transparent);
-            border-radius: 50%;
-            position: relative;
-        }
-
-        .celestial-2::before {
-            content: '';
-            position: absolute;
-            width: 38px;
-            height: 38px;
-            top: 2px;
-            left: 10px;
-            background: radial-gradient(circle, rgba(42,35,57,0.6), rgba(42,35,57,0.4));
-            border-radius: 50%;
-        }
-
-        /* Victorian ornamental star */
-        .celestial-3 {
-            width: 55px;
-            height: 55px;
-            top: 75%;
-            left: 20%;
-            background:
-                radial-gradient(circle at 50% 50%, rgba(210,200,230,0.25) 0%, transparent 35%),
-                linear-gradient(0deg, transparent 48%, rgba(210,200,230,0.2) 50%, transparent 52%),
-                linear-gradient(90deg, transparent 48%, rgba(210,200,230,0.2) 50%, transparent 52%),
-                linear-gradient(45deg, transparent 48%, rgba(200,190,220,0.15) 50%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(200,190,220,0.15) 50%, transparent 52%);
-        }
-
-        /* Subtle planet with ring */
-        .celestial-4 {
-            width: 48px;
-            height: 48px;
-            top: 12%;
-            right: 28%;
-            background: radial-gradient(circle at 40% 35%, rgba(195,185,215,0.3), rgba(175,165,205,0.15) 65%, transparent);
-            border-radius: 50%;
-            position: relative;
-        }
-
-        .celestial-4::after {
-            content: '';
-            position: absolute;
-            width: 70px;
-            height: 12px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-15deg);
-            background: linear-gradient(to right, transparent, rgba(200,190,220,0.15) 30%, rgba(200,190,220,0.15) 70%, transparent);
-            border-radius: 50%;
-        }
-
-        /* Dreamlike starburst */
-        .celestial-5 {
-            width: 50px;
-            height: 50px;
-            bottom: 18%;
-            right: 22%;
-            background:
-                radial-gradient(circle at 50% 50%, rgba(230,220,240,0.25) 0%, rgba(220,210,235,0.1) 30%, transparent 45%),
-                conic-gradient(from 0deg,
-                    transparent 10%, rgba(220,210,235,0.12) 12%, transparent 14%,
-                    transparent 35%, rgba(220,210,235,0.12) 37%, transparent 39%,
-                    transparent 60%, rgba(220,210,235,0.12) 62%, transparent 64%,
-                    transparent 85%, rgba(220,210,235,0.12) 87%, transparent 89%);
-        }
-
-        /* Small companion stars */
-        .celestial-6 {
-            width: 25px;
-            height: 25px;
-            top: 42%;
-            left: 5%;
-            background:
-                radial-gradient(circle, rgba(255,250,205,0.25) 0%, transparent 40%),
-                linear-gradient(0deg, transparent 47%, rgba(255,250,205,0.2) 50%, transparent 53%),
-                linear-gradient(90deg, transparent 47%, rgba(255,250,205,0.2) 50%, transparent 53%);
-        }
-
-        .celestial-7 {
-            width: 30px;
-            height: 30px;
-            top: 35%;
-            right: 8%;
-            background:
-                radial-gradient(circle, rgba(210,200,230,0.25) 0%, transparent 40%),
-                linear-gradient(45deg, transparent 48%, rgba(210,200,230,0.18) 50%, transparent 52%),
-                linear-gradient(-45deg, transparent 48%, rgba(210,200,230,0.18) 50%, transparent 52%);
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 30px 80px;
-            position: relative;
-            z-index: 3;
-            animation: fadeIn 1s ease-out;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 60px;
-            padding: 50px 35px;
-            background: rgba(0,0,0,0.2);
-            border: 2px solid rgba(255,250,205,0.15);
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-        }
-
-        h1 {
-            font-size: 3.5em;
-            color: #fffacd;
-            margin-bottom: 15px;
-            letter-spacing: 3px;
-            text-shadow: 0 0 25px rgba(255,250,205,0.6);
-        }
-
-        .subtitle {
-            font-size: 1.4em;
-            color: #c9b8d9;
-            font-style: italic;
-            margin-bottom: 25px;
-            letter-spacing: 2px;
-        }
-
-        .bio {
-            color: #d9cbe5;
-            font-size: 1.1em;
-            line-height: 1.8;
-            max-width: 700px;
-            margin: 0 auto 25px;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 35px;
-            margin-top: 25px;
-            flex-wrap: wrap;
-        }
-
-        .stat-number {
-            font-size: 2.2em;
-            color: #fffacd;
-            font-weight: bold;
-            display: block;
-        }
-
-        .stat-label {
-            color: #b8a9c9;
-            font-size: 0.9em;
-            font-style: italic;
-        }
-
-        .section {
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 1.9em;
-            color: #fffacd;
-            text-align: center;
-            margin-bottom: 35px;
-            letter-spacing: 2px;
-            text-shadow: 0 0 20px rgba(255,250,205,0.5);
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-bottom: 25px;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1;
-            border-radius: 15px;
-            border: 2px solid rgba(255,250,205,0.2);
-            background: rgba(0,0,0,0.3);
-            backdrop-filter: blur(10px);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.03);
-            border-color: #fffacd;
-            box-shadow: 0 15px 40px rgba(255,250,205,0.3);
-        }
-
-        .gallery-placeholder {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5em;
-            background: linear-gradient(135deg, rgba(102,126,234,0.2) 0%, rgba(118,75,162,0.2) 100%);
-        }
-
-        .gallery-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0,0,0,0.85);
-            padding: 12px;
-            color: #fffacd;
-            font-size: 0.9em;
-            transform: translateY(100%);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-item:hover .gallery-caption {
-            transform: translateY(0);
-        }
-
-        .about-section {
-            background: rgba(0,0,0,0.2);
-            border: 2px solid rgba(255,250,205,0.15);
-            border-radius: 20px;
-            padding: 40px 35px;
-            backdrop-filter: blur(15px);
-            margin-bottom: 50px;
-        }
-
-        .about-section h3 {
-            color: #fffacd;
-            font-size: 1.5em;
-            margin-bottom: 18px;
-            letter-spacing: 2px;
-        }
-
-        .about-section p {
-            color: #d9cbe5;
-            font-size: 1.05em;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-        .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .process-step {
-            text-align: center;
-            padding: 25px 15px;
-            background: rgba(0,0,0,0.2);
-            border: 2px solid rgba(255,250,205,0.1);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-
-        .process-step:hover {
-            border-color: rgba(255,250,205,0.3);
-            transform: translateY(-3px);
-        }
-
-        .process-number {
-            font-size: 2em;
-            color: #fffacd;
-            margin-bottom: 12px;
-        }
-
-        .process-title {
-            color: #c9b8d9;
-            font-size: 1.1em;
-            margin-bottom: 8px;
-            font-weight: bold;
-        }
-
-        .process-desc {
-            color: #b8a9c9;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        .testimonial {
-            background: rgba(0,0,0,0.25);
-            border: 2px solid rgba(255,250,205,0.2);
-            border-radius: 15px;
-            padding: 30px;
-            backdrop-filter: blur(12px);
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial:hover {
-            border-color: rgba(255,250,205,0.4);
-            transform: translateX(8px);
-        }
-
-        .testimonial-text {
-            color: #d9cbe5;
-            font-size: 1.05em;
-            line-height: 1.7;
-            font-style: italic;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-author {
-            color: #fffacd;
-            font-weight: bold;
-            font-size: 1.05em;
-        }
-
-        .testimonial-role {
-            color: #b8a9c9;
-            font-size: 0.85em;
-            font-style: italic;
-        }
-
-        .commission-info {
-            background: rgba(0,0,0,0.25);
-            border: 2px solid rgba(76,175,80,0.3);
-            border-radius: 20px;
-            padding: 35px;
-            margin-bottom: 45px;
-            backdrop-filter: blur(12px);
-        }
-
-        .commission-status {
-            display: inline-block;
-            background: rgba(76,175,80,0.2);
-            border: 2px solid rgba(76,175,80,0.5);
-            color: #90ee90;
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 1.1em;
-            font-weight: bold;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .commission-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
-        }
-
-        .commission-tier {
-            background: rgba(0,0,0,0.3);
-            border: 2px solid rgba(255,250,205,0.15);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .commission-tier:hover {
-            border-color: rgba(255,250,205,0.4);
-            transform: translateY(-3px);
-        }
-
-        .tier-name {
-            color: #fffacd;
-            font-size: 1.3em;
-            margin-bottom: 12px;
-            font-weight: bold;
-        }
-
-        .tier-price {
-            color: #90ee90;
-            font-size: 1.8em;
-            margin-bottom: 15px;
-        }
-
-        .tier-features {
-            color: #d9cbe5;
-            font-size: 0.9em;
-            line-height: 1.6;
-            text-align: left;
-            list-style: none;
-        }
-
-        .tier-features li {
-            margin-bottom: 8px;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .tier-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #90ee90;
-        }
-
-        .newsletter {
-            background: rgba(0,0,0,0.25);
-            border: 2px solid rgba(255,250,205,0.2);
-            border-radius: 20px;
-            padding: 35px;
-            text-align: center;
-            margin-bottom: 45px;
-            backdrop-filter: blur(12px);
-        }
-
-        .newsletter h3 {
-            color: #fffacd;
-            font-size: 1.6em;
-            margin-bottom: 12px;
-        }
-
-        .newsletter p {
-            color: #d9cbe5;
-            font-size: 1.05em;
-            margin-bottom: 20px;
-        }
-
-        .newsletter-form {
-            display: flex;
-            gap: 12px;
-            max-width: 500px;
-            margin: 0 auto;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .newsletter-input {
-            flex: 1;
-            min-width: 240px;
-            padding: 14px 18px;
-            border: 2px solid rgba(255,250,205,0.3);
-            border-radius: 25px;
-            background: rgba(0,0,0,0.3);
-            color: #fffacd;
-            font-size: 0.95em;
-            outline: none;
-        }
-
-        .newsletter-input::placeholder { color: #b8a9c9; }
-
-        .newsletter-button {
-            padding: 14px 30px;
-            background: #fffacd;
-            color: #0f1419;
-            border: none;
-            border-radius: 25px;
-            font-size: 0.95em;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .newsletter-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(255,250,205,0.4);
-        }
-
-        .platforms {
-            display: grid;
-            gap: 18px;
-        }
-
-        .platform-link {
-            background: rgba(0,0,0,0.25);
-            border: 2px solid rgba(255,250,205,0.2);
-            border-radius: 15px;
-            padding: 22px 28px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 22px;
-            transition: all 0.4s ease;
-            backdrop-filter: blur(12px);
-        }
-
-        .platform-link:hover {
-            transform: translateX(10px);
-            border-color: rgba(255,250,205,0.5);
-            box-shadow: 0 12px 40px rgba(255,250,205,0.25);
-        }
-
-        .platform-icon {
-            font-size: 2em;
-            width: 50px;
-            text-align: center;
-        }
-
-        .platform-name {
-            font-size: 1.3em;
-            color: #fffacd;
-            margin-bottom: 4px;
-            letter-spacing: 1px;
-        }
-
-        .platform-desc {
-            color: #b8a9c9;
-            font-size: 0.95em;
-            font-style: italic;
-        }
-
-        .cta-section {
-            text-align: center;
-            margin-top: 60px;
-            padding: 45px 35px;
-            background: rgba(0,0,0,0.25);
-            border: 2px solid rgba(255,250,205,0.2);
-            border-radius: 25px;
-            backdrop-filter: blur(15px);
-        }
-
-        .cta-text {
-            color: #d9cbe5;
-            font-size: 1.2em;
-            margin-bottom: 25px;
-            font-style: italic;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 18px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .cta-button {
-            padding: 18px 45px;
-            background: rgba(255,250,205,0.08);
-            color: #fffacd;
-            text-decoration: none;
-            border: 3px solid #fffacd;
-            border-radius: 50px;
-            font-size: 1.05em;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-        }
-
-        .cta-button:hover {
-            background: #fffacd;
-            color: #0f1419;
-            transform: translateY(-3px);
-            box-shadow: 0 12px 35px rgba(255,250,205,0.5);
-        }
-
-        .artist-note {
-            text-align: center;
-            color: #9a88b0;
-            font-size: 0.95em;
-            font-style: italic;
-            margin-top: 45px;
-            padding-top: 25px;
-            border-top: 1px solid rgba(255,250,205,0.15);
-        }
-
-        @media (max-width: 768px) {
-            .moon { width: 90px; height: 90px; top: 5%; right: 5%; }
-            h1 { font-size: 2.5em; }
-            .subtitle { font-size: 1.2em; }
-            .container { padding: 45px 20px; }
-            .header { padding: 40px 25px; }
-            .stats { gap: 20px; }
-            .stat-number { font-size: 1.8em; }
-            .gallery { grid-template-columns: 1fr; }
-            .platform-link { padding: 18px; gap: 18px; }
-            .newsletter-form { flex-direction: column; }
-            .newsletter-input { min-width: 100%; }
-            .cta-buttons { flex-direction: column; align-items: center; }
-            .cta-button { width: 100%; max-width: 280px; }
-
-            /* Scale down background elements on mobile */
-            .celestial { transform: scale(0.65); opacity: 0.28; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="moon"></div>
@@ -796,7 +124,7 @@
         <div class="newsletter">
             <h3>Stay Updated</h3>
             <p>Get notified about new work, commission openings, and upcoming projects.</p>
-            <form action="https://taurustech.us9.list-manage.com/subscribe/post?u=7fc4b621c8908f37d0a05cae5&amp;id=48aab43f5a&amp;f_id=008c53e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form validate" target="_blank">
+            <form action="https://taurustech.us9.list-manage.com/subscribe/post?u=7fc4b621c8908f37d0a05cae5&amp;id=48aab43f5a&amp;f_id=008c53e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="newsletter-form validate" target="_blank" rel="noopener">
                 <input type="email" name="EMAIL" class="newsletter-input required email" id="mce-EMAIL" placeholder="Your email address" required>
                 <!-- Real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
                 <div style="position: absolute; left: -5000px;" aria-hidden="true">
@@ -825,56 +153,56 @@
         <div class="section">
             <h2 class="section-title">Find Me Online</h2>
             <div class="platforms">
-                <a href="https://www.instagram.com/jolenecasko/" class="platform-link" target="_blank">
+                <a href="https://www.instagram.com/jolenecasko/" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">📷</div>
                     <div>
                         <div class="platform-name">Instagram</div>
                         <div class="platform-desc">@jolenecasko • Latest artwork & updates</div>
                     </div>
                 </a>
-                <a href="https://www.behance.net/jolenecasko" class="platform-link" target="_blank">
+                <a href="https://www.behance.net/jolenecasko" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🎨</div>
                     <div>
                         <div class="platform-name">Behance</div>
                         <div class="platform-desc">Portfolio showcase • 20+ years of work</div>
                     </div>
                 </a>
-                <a href="https://foundation.app/@jolenecasko" class="platform-link" target="_blank">
+                <a href="https://foundation.app/@jolenecasko" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🌙</div>
                     <div>
                         <div class="platform-name">Foundation</div>
                         <div class="platform-desc">Premium NFT artwork & collectibles</div>
                     </div>
                 </a>
-                <a href="https://opensea.io/jolenecasko" class="platform-link" target="_blank">
+                <a href="https://opensea.io/jolenecasko" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🌊</div>
                     <div>
                         <div class="platform-name">OpenSea</div>
                         <div class="platform-desc">NFT marketplace collections</div>
                     </div>
                 </a>
-                <a href="https://makersplace.com/marketplace/jolenecasko/" class="platform-link" target="_blank">
+                <a href="https://makersplace.com/marketplace/jolenecasko/" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🏛️</div>
                     <div>
                         <div class="platform-name">MakersPlace</div>
                         <div class="platform-desc">Curated digital art pieces</div>
                     </div>
                 </a>
-                <a href="https://twitter.com/jolenecasko" class="platform-link" target="_blank">
+                <a href="https://twitter.com/jolenecasko" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🐦</div>
                     <div>
                         <div class="platform-name">Twitter / X</div>
                         <div class="platform-desc">@jolenecasko • Creative process & thoughts</div>
                     </div>
                 </a>
-                <a href="https://www.redbubble.com/people/jolenecasko/shop" class="platform-link" target="_blank">
+                <a href="https://www.redbubble.com/people/jolenecasko/shop" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🛍️</div>
                     <div>
                         <div class="platform-name">Redbubble</div>
                         <div class="platform-desc">Prints, apparel & merchandise</div>
                     </div>
                 </a>
-                <a href="https://displate.com/artist/jollykoala" class="platform-link" target="_blank">
+                <a href="https://displate.com/artist/jollykoala" class="platform-link" target="_blank" rel="noopener">
                     <div class="platform-icon">🖼️</div>
                     <div>
                         <div class="platform-name">Displate</div>
@@ -888,7 +216,7 @@
             <p class="cta-text">If you're working on something and think we might collaborate well, send me a message. I'd love to hear what you're making.</p>
             <div class="cta-buttons">
                 <a href="mailto:jolenecasko@gmail.com" class="cta-button">Commission Work</a>
-                <a href="https://www.instagram.com/jolenecasko/" class="cta-button" target="_blank">Follow My Work</a>
+                <a href="https://www.instagram.com/jolenecasko/" class="cta-button" target="_blank" rel="noopener">Follow My Work</a>
             </div>
         </div>
 
