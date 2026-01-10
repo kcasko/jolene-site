@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commissions - Jolene Casko Digital Collage Artist</title>
+    <meta name="description" content="Commission custom surreal digital collage artwork. Specializing in album art for musicians, but open to all creative projects.">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Commission Artwork - Jolene Casko">
+    <meta property="og:description" content="Commission custom surreal digital collage artwork for your music, brand, or personal project.">
+    <meta property="og:image" content="/assets/images/og-image.jpg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/navigation.css">
+    <link rel="stylesheet" href="assets/css/forms.css">
+</head>
+<body>
+    <!-- Skip to content -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!-- Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="site-logo">
+                <span class="logo-icon">✂️</span>
+                <span class="logo-text">Jolene Casko</span>
+            </a>
+
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                ☰
+            </button>
+
+            <nav>
+                <ul class="main-nav" role="menubar">
+                    <li role="none"><a href="index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                    <li role="none"><a href="about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="commissions.html" class="nav-link" role="menuitem">Commissions</a></li>
+                    <li role="none"><a href="shop.html" class="nav-link" role="menuitem">Shop</a></li>
+                    <li role="none"><a href="blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                    <li role="none"><a href="contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Background elements -->
+    <div class="moon"></div>
+    <div class="bg-elements">
+        <div class="celestial celestial-1"></div>
+        <div class="celestial celestial-2"></div>
+        <div class="celestial celestial-3"></div>
+        <div class="celestial celestial-4"></div>
+        <div class="celestial celestial-5"></div>
+        <div class="celestial celestial-6"></div>
+        <div class="celestial celestial-7"></div>
+    </div>
+
+    <!-- Main content -->
+    <main id="main-content" class="page-content">
+        <div class="container">
+            <!-- Page header -->
+            <div class="header">
+                <div class="commission-status">COMMISSIONS OPEN</div>
+                <h1>Commission Custom Artwork</h1>
+                <p class="subtitle">Let's create something that belongs to your world</p>
+            </div>
+
+            <!-- Intro section -->
+            <div class="about-section">
+                <h2>How It Works</h2>
+                <p>
+                    I work with musicians on album art, singles, and visual branding. I also take on personal commissions, editorial projects, and conceptual pieces.
+                </p>
+                <p>
+                    Every project is different—scope, timeline, and pricing depend on what you're looking for. I don't use fixed packages because I'd rather build something specific to your needs than fit you into a template.
+                </p>
+                <p>
+                    Fill out the form below with as much detail as you can. I'll review your submission and get back to you within 2-3 business days to discuss your project, timeline, and pricing.
+                </p>
+            </div>
+
+            <!-- Pricing guidelines -->
+            <div class="section">
+                <h2 class="section-title">Investment Guidelines</h2>
+                <div class="pricing-tiers">
+                    <div class="pricing-tier">
+                        <div class="tier-name">Single Cover</div>
+                        <div class="tier-price">$300-500</div>
+                        <div class="tier-description">
+                            Album art for a single release. Includes one final piece with 2-3 revision rounds.
+                        </div>
+                    </div>
+                    <div class="pricing-tier">
+                        <div class="tier-name">Album Art</div>
+                        <div class="tier-price">$600-1200</div>
+                        <div class="tier-description">
+                            Full album cover with potential for additional pieces. Multiple concepts and revision rounds included.
+                        </div>
+                    </div>
+                    <div class="pricing-tier">
+                        <div class="tier-name">Custom Project</div>
+                        <div class="tier-price">Quote</div>
+                        <div class="tier-description">
+                            Personal commissions, editorial work, or multi-piece projects. Pricing based on scope and complexity.
+                        </div>
+                    </div>
+                </div>
+                <p style="text-align: center; color: #b8a9c9; font-style: italic; margin-top: 20px;">
+                    All projects require a 50% deposit to begin. Final pricing determined after project discussion.
+                </p>
+            </div>
+
+            <!-- Commission form -->
+            <div class="form-container">
+                <form id="commission-form" class="form-section" method="POST" data-netlify="true" name="commission">
+                    <h2>Request a Commission</h2>
+                    <p>Tell me about your project</p>
+
+                    <input type="hidden" name="form-name" value="commission">
+
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            Your Name <span class="required">*</span>
+                        </label>
+                        <input type="text" id="name" name="name" class="form-input" required
+                               placeholder="Full name">
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Email Address <span class="required">*</span>
+                        </label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                               placeholder="your@email.com">
+                    </div>
+
+                    <!-- Phone (optional) -->
+                    <div class="form-group">
+                        <label for="phone" class="form-label">
+                            Phone Number (optional)
+                        </label>
+                        <input type="tel" id="phone" name="phone" class="form-input"
+                               placeholder="For urgent project discussions">
+                    </div>
+
+                    <!-- Project Type -->
+                    <div class="form-group">
+                        <label for="project-type" class="form-label">
+                            Project Type <span class="required">*</span>
+                        </label>
+                        <select id="project-type" name="project-type" class="form-select" required>
+                            <option value="">Select project type...</option>
+                            <option value="album-art">Album Art</option>
+                            <option value="single-cover">Single Cover</option>
+                            <option value="ep-art">EP Artwork</option>
+                            <option value="branding">Visual Branding</option>
+                            <option value="personal">Personal Commission</option>
+                            <option value="editorial">Editorial/Publication</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <!-- Budget -->
+                    <div class="form-group">
+                        <label for="budget" class="form-label">
+                            Budget Range <span class="required">*</span>
+                        </label>
+                        <select id="budget" name="budget" class="form-select" required>
+                            <option value="">Select your budget...</option>
+                            <option value="under-500">Under $500</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-2000">$1,000 - $2,000</option>
+                            <option value="2000-plus">$2,000+</option>
+                            <option value="flexible">Flexible / Discuss</option>
+                        </select>
+                    </div>
+
+                    <!-- Timeline -->
+                    <div class="form-group">
+                        <label for="timeline" class="form-label">
+                            Timeline <span class="required">*</span>
+                        </label>
+                        <select id="timeline" name="timeline" class="form-select" required>
+                            <option value="">When do you need this?</option>
+                            <option value="rush">Rush (1-2 weeks) - May incur rush fee</option>
+                            <option value="moderate">Moderate (3-4 weeks)</option>
+                            <option value="flexible">Flexible (4+ weeks)</option>
+                            <option value="no-deadline">No specific deadline</option>
+                        </select>
+                    </div>
+
+                    <!-- Project Description -->
+                    <div class="form-group">
+                        <label for="description" class="form-label">
+                            Project Description <span class="required">*</span>
+                        </label>
+                        <textarea id="description" name="description" class="form-textarea" required
+                                  placeholder="Tell me about your project. What's the vision? What feeling or emotion are you after? Any specific imagery or themes in mind?"></textarea>
+                        <span class="form-helper">Be as detailed as possible. Include mood, themes, and any specific elements you want included.</span>
+                    </div>
+
+                    <!-- Music/Reference Links -->
+                    <div class="form-group">
+                        <label for="references" class="form-label">
+                            Reference Links
+                        </label>
+                        <textarea id="references" name="references" class="form-textarea" style="min-height: 100px;"
+                                  placeholder="Links to music, mood boards, visual references, social media, etc."></textarea>
+                        <span class="form-helper">Spotify links, Instagram, Pinterest boards, or any other references that help convey your vision.</span>
+                    </div>
+
+                    <!-- Usage Rights -->
+                    <div class="form-group">
+                        <label for="usage" class="form-label">
+                            Intended Use <span class="required">*</span>
+                        </label>
+                        <div class="form-checkbox-group">
+                            <label class="form-checkbox-option">
+                                <input type="checkbox" name="usage" value="digital-streaming">
+                                <span class="form-checkbox-label">Digital Streaming (Spotify, Apple Music, etc.)</span>
+                            </label>
+                            <label class="form-checkbox-option">
+                                <input type="checkbox" name="usage" value="social-media">
+                                <span class="form-checkbox-label">Social Media Promotion</span>
+                            </label>
+                            <label class="form-checkbox-option">
+                                <input type="checkbox" name="usage" value="physical-media">
+                                <span class="form-checkbox-label">Physical Media (CDs, Vinyl, etc.)</span>
+                            </label>
+                            <label class="form-checkbox-option">
+                                <input type="checkbox" name="usage" value="merchandise">
+                                <span class="form-checkbox-label">Merchandise</span>
+                            </label>
+                            <label class="form-checkbox-option">
+                                <input type="checkbox" name="usage" value="personal">
+                                <span class="form-checkbox-label">Personal Use Only</span>
+                            </label>
+                        </div>
+                        <span class="form-helper">Usage rights affect pricing. Select all that apply.</span>
+                    </div>
+
+                    <!-- Terms agreement -->
+                    <div class="form-group">
+                        <label class="form-checkbox-option">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <span class="form-checkbox-label">
+                                I understand that a 50% deposit is required to begin work, and final pricing will be determined after project discussion. I've read the <a href="legal/terms.html" style="color: #fffacd; text-decoration: underline;">Terms of Service</a>.
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="form-submit">Submit Commission Request</button>
+                </form>
+            </div>
+
+            <!-- What happens next -->
+            <div class="about-section">
+                <h2>What Happens Next?</h2>
+                <p>
+                    <strong>1. Review:</strong> I'll review your submission within 2-3 business days.
+                </p>
+                <p>
+                    <strong>2. Discussion:</strong> If it's a good fit, I'll email you to discuss details, timeline, and provide a formal quote.
+                </p>
+                <p>
+                    <strong>3. Agreement:</strong> Once we agree on scope and pricing, I'll send a project agreement and invoice for the 50% deposit.
+                </p>
+                <p>
+                    <strong>4. Creation:</strong> After deposit is received, I'll begin work and share drafts for feedback as we go.
+                </p>
+                <p>
+                    <strong>5. Delivery:</strong> Final files delivered upon completion and final payment.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="press.html">Press</a>
+                        <a href="legal/privacy.html">Privacy</a>
+                        <a href="legal/terms.html">Terms</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                    <p class="footer-copyright">
+                        © 2025 Jolene Casko. All artwork and images are copyrighted.
+                    </p>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="assets/js/navigation.js"></script>
+    <script src="assets/js/commission-form.js"></script>
+</body>
+</html>

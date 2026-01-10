@@ -1,0 +1,295 @@
+/* Form Styles - Commission and contact forms */
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-section {
+    background: rgba(0, 0, 0, 0.25);
+    border: 2px solid rgba(255, 250, 205, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+}
+
+.form-section h2 {
+    color: #fffacd;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.form-section p {
+    color: #d9cbe5;
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-label {
+    display: block;
+    color: #fffacd;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.form-label .required {
+    color: #ff6b6b;
+    margin-left: 4px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+    width: 100%;
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 250, 205, 0.3);
+    border-radius: 12px;
+    color: #fffacd;
+    font-size: 0.95em;
+    font-family: Georgia, serif;
+    transition: all 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+    outline: none;
+    border-color: #fffacd;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px rgba(255, 250, 205, 0.2);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: #b8a9c9;
+    opacity: 0.8;
+}
+
+.form-textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23fffacd' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.form-select option {
+    background: #1a1529;
+    color: #fffacd;
+}
+
+/* Radio and checkbox groups */
+.form-radio-group,
+.form-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-radio-option,
+.form-checkbox-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 250, 205, 0.15);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-radio-option:hover,
+.form-checkbox-option:hover {
+    border-color: rgba(255, 250, 205, 0.4);
+    background: rgba(255, 250, 205, 0.05);
+}
+
+.form-radio-option input[type="radio"],
+.form-checkbox-option input[type="checkbox"] {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #fffacd;
+}
+
+.form-radio-label,
+.form-checkbox-label {
+    color: #d9cbe5;
+    font-size: 0.95em;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* File upload */
+.form-file-input {
+    display: none;
+}
+
+.form-file-label {
+    display: inline-block;
+    padding: 12px 24px;
+    background: rgba(255, 250, 205, 0.1);
+    border: 2px solid rgba(255, 250, 205, 0.3);
+    border-radius: 25px;
+    color: #fffacd;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.form-file-label:hover {
+    background: rgba(255, 250, 205, 0.2);
+    border-color: #fffacd;
+}
+
+.file-name {
+    display: block;
+    margin-top: 10px;
+    color: #c9b8d9;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/* Submit button */
+.form-submit {
+    width: 100%;
+    padding: 16px;
+    background: #fffacd;
+    border: none;
+    border-radius: 30px;
+    color: #0f1419;
+    font-size: 1.05em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Georgia, serif;
+    text-transform: uppercase;
+}
+
+.form-submit:hover,
+.form-submit:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 250, 205, 0.4);
+}
+
+.form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Helper text */
+.form-helper {
+    display: block;
+    margin-top: 6px;
+    color: #b8a9c9;
+    font-size: 0.85em;
+    font-style: italic;
+}
+
+/* Error state */
+.form-group.error .form-input,
+.form-group.error .form-textarea,
+.form-group.error .form-select {
+    border-color: #ff6b6b;
+}
+
+.form-error {
+    display: block;
+    margin-top: 6px;
+    color: #ff6b6b;
+    font-size: 0.85em;
+}
+
+/* Success message */
+.form-success {
+    background: rgba(76, 175, 80, 0.2);
+    border: 2px solid rgba(76, 175, 80, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    color: #90ee90;
+    text-align: center;
+}
+
+.form-success h3 {
+    color: #90ee90;
+    margin-bottom: 10px;
+}
+
+/* Pricing tiers */
+.pricing-tiers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.pricing-tier {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 250, 205, 0.15);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.pricing-tier:hover {
+    border-color: rgba(255, 250, 205, 0.4);
+    transform: translateY(-3px);
+}
+
+.tier-name {
+    color: #fffacd;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.tier-price {
+    color: #90ee90;
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.tier-description {
+    color: #d9cbe5;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 25px 20px;
+    }
+
+    .pricing-tiers {
+        grid-template-columns: 1fr;
+    }
+
+    .form-radio-group,
+    .form-checkbox-group {
+        gap: 10px;
+    }
+}
