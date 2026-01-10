@@ -241,6 +241,12 @@ h1 {
     margin: 0 auto 25px;
 }
 
+.bio-location {
+    margin-top: 15px;
+    font-size: 0.95em;
+    color: #b8a9c9;
+}
+
 .stats {
     display: flex;
     justify-content: center;
@@ -464,6 +470,27 @@ h1 {
     backdrop-filter: blur(12px);
 }
 
+.commission-content {
+    text-align: center;
+}
+
+.commission-content .section-title {
+    margin-bottom: 10px;
+}
+
+.commission-content p {
+    color: #d9cbe5;
+    font-size: 1.05em;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.commission-content p:last-of-type {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
 .commission-status {
     display: inline-block;
     background: rgba(76,175,80,0.2);
@@ -593,6 +620,27 @@ h1 {
 .newsletter-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 25px rgba(255,250,205,0.4);
+}
+
+.honeypot {
+    position: absolute;
+    left: -5000px;
+}
+
+#mce-responses {
+    margin-top: 10px;
+}
+
+#mce-error-response {
+    display: none;
+    color: #ff6b6b;
+    font-size: 0.9em;
+}
+
+#mce-success-response {
+    display: none;
+    color: #90ee90;
+    font-size: 0.9em;
 }
 
 .platforms {
