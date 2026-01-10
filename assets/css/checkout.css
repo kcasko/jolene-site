@@ -1,0 +1,283 @@
+/**
+ * Checkout Modal Styles
+ * Styles for the variant selection modal and checkout flow
+ */
+
+/* Modal Overlay */
+.checkout-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Modal Container */
+.checkout-modal {
+    background: linear-gradient(135deg, #2a1a3d 0%, #1a0f2e 100%);
+    border: 2px solid #8b7aa8;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: slideUp 0.3s ease-out;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Modal Close Button */
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #d9cbe5;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background-color: rgba(139, 122, 168, 0.2);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 30px 30px 20px;
+    border-bottom: 1px solid rgba(139, 122, 168, 0.3);
+}
+
+.modal-header h2 {
+    color: #fffacd;
+    font-size: 28px;
+    margin: 0 0 8px;
+    font-family: 'Playfair Display', serif;
+}
+
+.modal-subtitle {
+    color: #d9cbe5;
+    font-size: 16px;
+    margin: 0;
+    opacity: 0.8;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 30px;
+}
+
+/* Variant Options */
+.variant-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.variant-option-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 18px 20px;
+    background: rgba(139, 122, 168, 0.1);
+    border: 2px solid rgba(139, 122, 168, 0.3);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+    color: #d9cbe5;
+}
+
+.variant-option-btn:hover {
+    background: rgba(139, 122, 168, 0.2);
+    border-color: #8b7aa8;
+    transform: translateX(5px);
+}
+
+.variant-option-btn:active {
+    transform: translateX(5px) scale(0.98);
+}
+
+.variant-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.variant-details {
+    flex: 1;
+}
+
+.variant-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fffacd;
+    margin-bottom: 4px;
+}
+
+.variant-desc {
+    font-size: 14px;
+    color: #d9cbe5;
+    opacity: 0.8;
+}
+
+.variant-price {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fffacd;
+    flex-shrink: 0;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 20px 30px 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Loading State */
+.loading-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(139, 122, 168, 0.2);
+    border-top-color: #8b7aa8;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-state p {
+    color: #d9cbe5;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Error State */
+.error-state {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px;
+}
+
+.error-details {
+    color: #d9cbe5;
+    font-size: 14px;
+    margin: 0 0 20px;
+    opacity: 0.8;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8b7aa8 0%, #6a5a88 100%);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #9b8ab8 0%, #7a6a98 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 122, 168, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #d9cbe5;
+    border: 2px solid rgba(139, 122, 168, 0.5);
+}
+
+.btn-secondary:hover {
+    background: rgba(139, 122, 168, 0.1);
+    border-color: #8b7aa8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .checkout-modal {
+        max-width: 100%;
+        margin: 0;
+        border-radius: 0;
+        max-height: 100vh;
+    }
+
+    .modal-header h2 {
+        font-size: 24px;
+    }
+
+    .variant-option-btn {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .variant-price {
+        font-size: 20px;
+    }
+}

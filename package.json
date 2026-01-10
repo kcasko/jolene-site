@@ -1,0 +1,26 @@
+{
+  "name": "jolene-casko-portfolio",
+  "version": "2.0.0",
+  "description": "Portfolio website for Jolene Casko - Digital Collage Artist",
+  "private": true,
+  "author": "Jolene Casko <jolenecasko@gmail.com>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcasko/jolene-site.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "stripe": "^14.11.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.13.1"
+  },
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod",
+    "test": "echo \"No tests configured\" && exit 0"
+  }
+}

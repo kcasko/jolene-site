@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Successful - Jolene Casko</title>
+    <meta name="robots" content="noindex">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/navigation.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="../index.html" class="site-logo">
+                <span class="logo-icon">✂️</span>
+                <span class="logo-text">Jolene Casko</span>
+            </a>
+            <button type="button" class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <nav>
+                <ul class="main-nav" role="menubar">
+                    <li role="none"><a href="../index.html" class="nav-link" role="menuitem">Home</a></li>
+                    <li role="none"><a href="../portfolio.html" class="nav-link" role="menuitem">Portfolio</a></li>
+                    <li role="none"><a href="../about.html" class="nav-link" role="menuitem">About</a></li>
+                    <li role="none"><a href="../commissions.html" class="nav-link" role="menuitem">Commissions</a></li>
+                    <li role="none"><a href="../shop.html" class="nav-link" role="menuitem">Shop</a></li>
+                    <li role="none"><a href="../blog.html" class="nav-link" role="menuitem">Blog</a></li>
+                    <li role="none"><a href="../contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="moon"></div>
+    <div class="bg-elements">
+        <div class="celestial celestial-1"></div>
+        <div class="celestial celestial-2"></div>
+        <div class="celestial celestial-3"></div>
+        <div class="celestial celestial-4"></div>
+        <div class="celestial celestial-5"></div>
+        <div class="celestial celestial-6"></div>
+        <div class="celestial celestial-7"></div>
+    </div>
+
+    <main id="main-content" class="page-content">
+        <div class="container">
+            <div class="success-page">
+                <div class="success-icon">✓</div>
+                <h1>Purchase Successful!</h1>
+                <p class="success-message">
+                    Thank you for supporting independent art. Your order has been confirmed.
+                </p>
+
+                <div class="about-section">
+                    <h2>What happens next?</h2>
+
+                    <div id="digitalInfo" style="display: none;">
+                        <h3>Digital Download</h3>
+                        <p>
+                            You will receive an email with your download link within the next 24 hours.
+                            The download link will be valid for 7 days.
+                        </p>
+                        <p>
+                            <strong>Didn't receive the email?</strong> Check your spam folder or <a href="../contact.html" class="link-accent">contact me</a>.
+                        </p>
+                    </div>
+
+                    <div id="printInfo" style="display: none;">
+                        <h3>Physical Print</h3>
+                        <p>
+                            Your print will be professionally produced and carefully packaged within 5-7 business days.
+                            You'll receive tracking information via email once it ships.
+                        </p>
+                        <p>
+                            <strong>Questions about your order?</strong> <a href="../contact.html" class="link-accent">Contact me</a> anytime.
+                        </p>
+                    </div>
+
+                    <p style="margin-top: 30px;">
+                        A confirmation email has been sent to your email address with order details.
+                    </p>
+                </div>
+
+                <div class="success-actions">
+                    <a href="../shop.html" class="cta-button">Continue Shopping</a>
+                    <a href="../portfolio.html" class="cta-button">View Portfolio</a>
+                </div>
+
+                <div class="about-section" style="text-align: center; margin-top: 50px;">
+                    <h2>Loved your purchase?</h2>
+                    <p>
+                        Share your new artwork on social media and tag me!<br>
+                        <a href="https://www.instagram.com/jolenecasko/" target="_blank" rel="noopener" class="link-accent">@jolenecasko</a>
+                    </p>
+                    <p style="margin-top: 30px;">
+                        <a href="../commissions.html" class="link-accent">Commission custom artwork</a> or
+                        <a href="../contact.html" class="link-accent">get in touch</a>
+                    </p>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+                <div class="footer-content">
+                    <div class="footer-links">
+                        <a href="../press.html">Press</a>
+                        <a href="../legal/privacy.html">Privacy</a>
+                        <a href="../legal/terms.html">Terms</a>
+                        <a href="../contact.html">Contact</a>
+                    </div>
+                    <p class="footer-copyright">© 2025 Jolene Casko. All artwork and images are copyrighted.</p>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <script src="../assets/js/navigation.js"></script>
+    <script>
+        // Parse session ID from URL to potentially fetch order details
+        const urlParams = new URLSearchParams(window.location.search);
+        const sessionId = urlParams.get('session_id');
+
+        // Simple detection - in production, fetch from Stripe API via serverless function
+        // For now, show both types of info
+        document.getElementById('digitalInfo').style.display = 'block';
+        document.getElementById('printInfo').style.display = 'block';
+    </script>
+
+    <style>
+        .success-page {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            margin: 0 auto 30px;
+            animation: successPop 0.5s ease-out;
+        }
+
+        @keyframes successPop {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .success-page h1 {
+            color: #fffacd;
+            font-size: 36px;
+            margin: 0 0 15px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .success-message {
+            color: #d9cbe5;
+            font-size: 18px;
+            margin: 0 0 40px;
+        }
+
+        .success-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .link-accent {
+            color: #fffacd;
+            text-decoration: underline;
+        }
+
+        .link-accent:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .success-page h1 {
+                font-size: 28px;
+            }
+
+            .success-icon {
+                width: 80px;
+                height: 80px;
+                font-size: 48px;
+            }
+
+            .success-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>
