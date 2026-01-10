@@ -67,6 +67,133 @@
             z-index: 2;
         }
 
+        /* Background visual elements container */
+        .bg-elements {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Celestial bodies with subtle character - Mellon Collie inspired */
+        .celestial {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.35;
+        }
+
+        /* Star with subtle rays */
+        .celestial-1 {
+            width: 65px;
+            height: 65px;
+            top: 18%;
+            left: 10%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(255,250,205,0.3) 0%, transparent 40%),
+                conic-gradient(from 0deg,
+                    transparent 20%, rgba(255,250,205,0.15) 22.5%, transparent 25%,
+                    transparent 45%, rgba(255,250,205,0.15) 47.5%, transparent 50%,
+                    transparent 70%, rgba(255,250,205,0.15) 72.5%, transparent 75%,
+                    transparent 95%, rgba(255,250,205,0.15) 97.5%, transparent 100%);
+        }
+
+        /* Crescent moon shape */
+        .celestial-2 {
+            width: 45px;
+            height: 45px;
+            top: 55%;
+            right: 15%;
+            background: radial-gradient(circle at 30% 30%, rgba(230,220,210,0.4), rgba(210,200,190,0.2) 70%, transparent);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .celestial-2::before {
+            content: '';
+            position: absolute;
+            width: 38px;
+            height: 38px;
+            top: 2px;
+            left: 10px;
+            background: radial-gradient(circle, rgba(42,35,57,0.6), rgba(42,35,57,0.4));
+            border-radius: 50%;
+        }
+
+        /* Victorian ornamental star */
+        .celestial-3 {
+            width: 55px;
+            height: 55px;
+            top: 75%;
+            left: 20%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(210,200,230,0.25) 0%, transparent 35%),
+                linear-gradient(0deg, transparent 48%, rgba(210,200,230,0.2) 50%, transparent 52%),
+                linear-gradient(90deg, transparent 48%, rgba(210,200,230,0.2) 50%, transparent 52%),
+                linear-gradient(45deg, transparent 48%, rgba(200,190,220,0.15) 50%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(200,190,220,0.15) 50%, transparent 52%);
+        }
+
+        /* Subtle planet with ring */
+        .celestial-4 {
+            width: 48px;
+            height: 48px;
+            top: 12%;
+            right: 28%;
+            background: radial-gradient(circle at 40% 35%, rgba(195,185,215,0.3), rgba(175,165,205,0.15) 65%, transparent);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .celestial-4::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 12px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-15deg);
+            background: linear-gradient(to right, transparent, rgba(200,190,220,0.15) 30%, rgba(200,190,220,0.15) 70%, transparent);
+            border-radius: 50%;
+        }
+
+        /* Dreamlike starburst */
+        .celestial-5 {
+            width: 50px;
+            height: 50px;
+            bottom: 18%;
+            right: 22%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(230,220,240,0.25) 0%, rgba(220,210,235,0.1) 30%, transparent 45%),
+                conic-gradient(from 0deg,
+                    transparent 10%, rgba(220,210,235,0.12) 12%, transparent 14%,
+                    transparent 35%, rgba(220,210,235,0.12) 37%, transparent 39%,
+                    transparent 60%, rgba(220,210,235,0.12) 62%, transparent 64%,
+                    transparent 85%, rgba(220,210,235,0.12) 87%, transparent 89%);
+        }
+
+        /* Small companion stars */
+        .celestial-6 {
+            width: 25px;
+            height: 25px;
+            top: 42%;
+            left: 5%;
+            background:
+                radial-gradient(circle, rgba(255,250,205,0.25) 0%, transparent 40%),
+                linear-gradient(0deg, transparent 47%, rgba(255,250,205,0.2) 50%, transparent 53%),
+                linear-gradient(90deg, transparent 47%, rgba(255,250,205,0.2) 50%, transparent 53%);
+        }
+
+        .celestial-7 {
+            width: 30px;
+            height: 30px;
+            top: 35%;
+            right: 8%;
+            background:
+                radial-gradient(circle, rgba(210,200,230,0.25) 0%, transparent 40%),
+                linear-gradient(45deg, transparent 48%, rgba(210,200,230,0.18) 50%, transparent 52%),
+                linear-gradient(-45deg, transparent 48%, rgba(210,200,230,0.18) 50%, transparent 52%);
+        }
+
         .container {
             max-width: 1100px;
             margin: 0 auto;
@@ -545,12 +672,27 @@
             .newsletter-input { min-width: 100%; }
             .cta-buttons { flex-direction: column; align-items: center; }
             .cta-button { width: 100%; max-width: 280px; }
+
+            /* Scale down background elements on mobile */
+            .celestial { transform: scale(0.65); opacity: 0.28; }
         }
     </style>
 </head>
 <body>
     <div class="moon"></div>
-    
+
+    <!-- Subtle background visual elements -->
+    <div class="bg-elements">
+        <!-- Mellon Collie-inspired celestial bodies -->
+        <div class="celestial celestial-1"></div>
+        <div class="celestial celestial-2"></div>
+        <div class="celestial celestial-3"></div>
+        <div class="celestial celestial-4"></div>
+        <div class="celestial celestial-5"></div>
+        <div class="celestial celestial-6"></div>
+        <div class="celestial celestial-7"></div>
+    </div>
+
     <div class="container">
         <div class="header">
             <h1>Jolene Casko</h1>
