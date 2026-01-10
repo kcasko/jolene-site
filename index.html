@@ -80,122 +80,9 @@
             <!-- Featured work section -->
             <section class="section">
                 <h2 class="section-title">Featured Work</h2>
+                <!-- Gallery dynamically populated from content/artworks.json -->
                 <div class="gallery">
-                    <div class="gallery-item artwork-card featured"
-                         data-artwork-id="lunar-dreams"
-                         data-category="album-art"
-                         data-tags="album-art, celestial, commissioned"
-                         data-description="A dreamlike celestial collage featuring vintage portraiture surrounded by lunar phases and cosmic elements."
-                         data-date="November 2024"
-                         data-type="Digital Collage"
-                         data-available="true"
-                         data-price-digital="25"
-                         data-price-print8x10="45"
-                         data-price-print16x20="85">
-                        <img src="assets/images/artworks/499224803_1298277118970954_217332104034590816_n.jpg"
-                             alt="Lunar Dreams - Surreal collage with vintage portrait and moons"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Lunar Dreams</div>
-                            <div class="artwork-category">Album Art</div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item artwork-card featured"
-                         data-artwork-id="rose-garden"
-                         data-category="collage"
-                         data-tags="nature, flowers, surreal"
-                         data-description="An ethereal composition blending vintage roses with dreamlike atmospheric elements."
-                         data-date="December 2024"
-                         data-type="Digital Collage"
-                         data-available="true"
-                         data-price-digital="25"
-                         data-price-print8x10="45"
-                         data-price-print16x20="85">
-                        <img src="assets/images/artworks/504832693_1315643813900951_7295640018996093784_n.jpg"
-                             alt="Rose Garden - Ethereal floral collage"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Rose Garden</div>
-                            <div class="artwork-category">Experimental</div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item artwork-card"
-                         data-artwork-id="metamorphosis"
-                         data-category="experimental"
-                         data-tags="surreal, transformation, abstract"
-                         data-description="A visual exploration of transformation through layered imagery and unexpected juxtapositions."
-                         data-date="January 2025"
-                         data-type="Digital Collage"
-                         data-available="true"
-                         data-price-digital="25"
-                         data-price-print16x20="85">
-                        <img src="assets/images/artworks/518043519_1347303007401698_1369059919729502128_n.jpg"
-                             alt="Metamorphosis - Abstract transformative collage"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Metamorphosis</div>
-                            <div class="artwork-category">Experimental</div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item artwork-card featured"
-                         data-artwork-id="cosmic-ocean"
-                         data-category="album-art"
-                         data-tags="album-art, celestial, ocean, commissioned"
-                         data-description="Where cosmic vastness meets oceanic depth in a surreal meditation on infinity."
-                         data-date="December 2024"
-                         data-type="Digital Collage"
-                         data-available="true"
-                         data-price-digital="25"
-                         data-price-print8x10="45"
-                         data-price-print16x20="85"
-                         data-price-print24x36="150">
-                        <img src="assets/images/artworks/526989708_1365785275553471_2217496400386426939_n.jpg"
-                             alt="Cosmic Ocean - Celestial and oceanic collage"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Cosmic Ocean</div>
-                            <div class="artwork-category">Album Art</div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item artwork-card"
-                         data-artwork-id="stardust"
-                         data-category="collage"
-                         data-tags="celestial, portrait, vintage"
-                         data-description="A vintage portrait reimagined through cosmic stardust and celestial wonder."
-                         data-date="January 2025"
-                         data-type="Digital Collage"
-                         data-available="true"
-                         data-price-digital="25"
-                         data-price-print16x20="85">
-                        <img src="assets/images/artworks/555083929_1415827430549255_2308349470188256460_n.jpg"
-                             alt="Stardust - Vintage portrait with cosmic elements"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Stardust</div>
-                            <div class="artwork-category">Personal Work</div>
-                        </div>
-                    </div>
-
-                    <div class="gallery-item artwork-card featured"
-                         data-artwork-id="symphony"
-                         data-category="album-art"
-                         data-tags="album-art, music, commissioned"
-                         data-description="A visual symphony translating musical layers into surreal collage composition."
-                         data-date="November 2024"
-                         data-type="Digital Collage"
-                         data-available="false">
-                        <img src="assets/images/artworks/577045367_1454099106722087_8385517091408693551_n.jpg"
-                             alt="Symphony - Musical inspired collage"
-                             class="artwork-image">
-                        <div class="gallery-caption artwork-overlay">
-                            <div class="artwork-title">Symphony</div>
-                            <div class="artwork-category">Album Art</div>
-                        </div>
-                    </div>
+                    <!-- Content loaded by content-loader.js -->
                 </div>
 
                 <div class="section-cta">
@@ -339,6 +226,7 @@
     </script>
 
     <!-- JavaScript -->
+    <script src="assets/js/content-loader.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/gallery-filter.js"></script>
     <script src="assets/js/lightbox.js"></script>

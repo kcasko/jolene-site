@@ -1,0 +1,46 @@
+{
+  "site": {
+    "title": "Jolene Casko - Digital Collage Artist",
+    "description": "Surreal digital collages inspired by music, poetry, and emotion. Specializing in album art for musicians.",
+    "author": "Jolene Casko",
+    "url": "https://jolene.taurustech.me",
+    "email": "jolenecasko@gmail.com",
+    "location": "Greensburg, Pennsylvania, USA"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/jolenecasko/",
+    "behance": "https://www.behance.net/jolenecasko",
+    "twitter": "https://twitter.com/jolenecasko",
+    "foundation": "https://foundation.app/@jolenecasko",
+    "opensea": "https://opensea.io/jolenecasko",
+    "makersplace": "https://makersplace.com/marketplace/jolenecasko/",
+    "redbubble": "https://www.redbubble.com/people/jolenecasko/shop",
+    "displate": "https://displate.com/artist/jollykoala"
+  },
+  "commission": {
+    "status": "open",
+    "statusText": "COMMISSIONS OPEN",
+    "depositRequired": true,
+    "depositPercentage": 50,
+    "typicalTurnaround": "3-6 weeks"
+  },
+  "shop": {
+    "currency": "USD",
+    "shippingDomestic": 10,
+    "shippingInternational": "varies",
+    "productionTime": "5-7 business days",
+    "digitalDeliveryTime": "24 hours"
+  },
+  "seo": {
+    "defaultOgImage": "/assets/images/og-image.jpg",
+    "twitterHandle": "@jolenecasko",
+    "keywords": ["digital collage", "album art", "surreal art", "commissioned artwork", "music-inspired art"]
+  },
+  "features": {
+    "newsletter": true,
+    "blog": false,
+    "shop": true,
+    "commissions": true,
+    "analytics": true
+  }
+}
