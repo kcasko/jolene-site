@@ -1,4 +1,4 @@
-# robots.txt for jolene.taurustech.me
+# robots.txt for jolenecasko.netlify.app
 
 User-agent: *
 Allow: /
@@ -6,9 +6,10 @@ Disallow: /netlify/
 Disallow: /.netlify/
 Disallow: /admin/
 Disallow: /shop/success.html
+Disallow: /scripts/
 
 # Sitemap
-Sitemap: https://jolene.taurustech.me/sitemap.xml
+Sitemap: https://jolenecasko.netlify.app/sitemap.xml
 
 # Crawl delay (optional, helps prevent overload)
 Crawl-delay: 1
