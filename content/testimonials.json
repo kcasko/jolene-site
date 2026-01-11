@@ -1,0 +1,43 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "client": "Alex Rivera",
+      "role": "Indie Musician",
+      "project": "Lunar Dreams Album Art",
+      "quote": "Jolene captured the exact mood I was going for. The way she translated my music into visual form was incredible. Working with her felt like a true collaboration.",
+      "rating": 5,
+      "date": "2024-11-20",
+      "featured": true,
+      "image": {
+        "url": "/assets/images/testimonials/client-1.jpg",
+        "alt": "Alex Rivera"
+      },
+      "projectImage": "/assets/images/artworks/499224803_1298277118970954_217332104034590816_n.jpg"
+    },
+    {
+      "id": "testimonial-2",
+      "client": "The Midnight Collective",
+      "role": "Electronic Music Duo",
+      "project": "Cosmic Ocean Album Art",
+      "quote": "Professional, creative, and incredibly responsive. Jolene brought our vision to life in ways we couldn't have imagined. The final piece perfectly represents our sound.",
+      "rating": 5,
+      "date": "2024-12-10",
+      "featured": true,
+      "image": null,
+      "projectImage": "/assets/images/artworks/526989708_1365785275553471_2217496400386426939_n.jpg"
+    },
+    {
+      "id": "testimonial-3",
+      "client": "Sarah Chen",
+      "role": "Classical Composer",
+      "project": "Symphony Single Cover",
+      "quote": "Working with Jolene was a breath of fresh air. She understood the emotional complexity of classical music and translated it into stunning visual art. Highly recommend!",
+      "rating": 5,
+      "date": "2024-11-15",
+      "featured": false,
+      "image": null,
+      "projectImage": "/assets/images/artworks/577045367_1454099106722087_8385517091408693551_n.jpg"
+    }
+  ]
+}

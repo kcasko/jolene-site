@@ -1,0 +1,61 @@
+{
+  "press": [
+    {
+      "id": "press-1",
+      "publication": "Digital Arts Magazine",
+      "title": "10 Digital Collage Artists to Watch in 2025",
+      "url": "#",
+      "date": "2025-01-05",
+      "excerpt": "Jolene Casko's surreal digital collages blend vintage imagery with contemporary themes, creating haunting visual narratives for musicians.",
+      "type": "feature",
+      "featured": true,
+      "logo": null
+    },
+    {
+      "id": "press-2",
+      "publication": "Indie Music Spotlight",
+      "title": "The Artists Behind Your Favorite Album Covers",
+      "url": "#",
+      "date": "2024-12-20",
+      "excerpt": "Casko's work with indie musicians has resulted in some of the most visually striking album art of the past year.",
+      "type": "interview",
+      "featured": true,
+      "logo": null
+    },
+    {
+      "id": "press-3",
+      "publication": "Creative Review",
+      "title": "Exploring Surrealism in Modern Album Art",
+      "url": "#",
+      "date": "2024-11-10",
+      "excerpt": "Featured artist Jolene Casko discusses her process of translating musical emotion into surreal visual compositions.",
+      "type": "article",
+      "featured": false,
+      "logo": null
+    }
+  ],
+  "awards": [
+    {
+      "id": "award-1",
+      "title": "Best Album Art Design",
+      "organization": "Independent Music Awards",
+      "year": "2024",
+      "project": "Lunar Dreams",
+      "featured": true
+    },
+    {
+      "id": "award-2",
+      "title": "Featured Artist",
+      "organization": "Behance",
+      "year": "2024",
+      "project": "Portfolio Showcase",
+      "featured": true
+    }
+  ],
+  "stats": {
+    "yearsExperience": 20,
+    "projectsCompleted": 150,
+    "happyClients": 75,
+    "countriesServed": 15
+  }
+}
