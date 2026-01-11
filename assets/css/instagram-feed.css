@@ -1,0 +1,211 @@
+/**
+ * Instagram Feed Styles
+ */
+
+.instagram-feed {
+    margin: 60px 0;
+}
+
+/* Instagram Header */
+.instagram-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.instagram-icon {
+    font-size: 28px;
+}
+
+.instagram-header h3 {
+    color: #fffacd;
+    font-size: 24px;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.instagram-follow-link {
+    color: #8b7aa8;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: auto;
+    transition: color 0.2s ease;
+}
+
+.instagram-follow-link:hover {
+    color: #fffacd;
+}
+
+/* Instagram Grid */
+.instagram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.instagram-post {
+    position: relative;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.instagram-post:hover {
+    transform: scale(1.05);
+}
+
+.instagram-post img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.instagram-post-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.instagram-post:hover .instagram-post-overlay {
+    opacity: 1;
+}
+
+.instagram-likes,
+.instagram-comments {
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* View More Link */
+.instagram-view-more {
+    display: inline-block;
+    color: #8b7aa8;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: 2px solid #8b7aa8;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.instagram-view-more:hover {
+    background: rgba(139, 122, 168, 0.1);
+    color: #fffacd;
+    border-color: #fffacd;
+}
+
+/* Fallback Display */
+.instagram-fallback {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(42, 26, 61, 0.5) 0%, rgba(26, 15, 46, 0.5) 100%);
+    border: 2px solid rgba(139, 122, 168, 0.3);
+    border-radius: 12px;
+}
+
+.instagram-fallback .instagram-header {
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.instagram-fallback p {
+    color: #d9cbe5;
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.instagram-follow-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #8b7aa8 0%, #6a5a88 100%);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin-bottom: 30px;
+}
+
+.instagram-follow-button:hover {
+    background: linear-gradient(135deg, #9b8ab8 0%, #7a6a98 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 122, 168, 0.4);
+}
+
+/* Placeholder Grid */
+.instagram-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.instagram-placeholder {
+    aspect-ratio: 1;
+    background: rgba(139, 122, 168, 0.1);
+    border: 2px solid rgba(139, 122, 168, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.instagram-placeholder:hover {
+    background: rgba(139, 122, 168, 0.2);
+    border-color: rgba(139, 122, 168, 0.4);
+}
+
+.instagram-placeholder-content span {
+    font-size: 32px;
+    opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .instagram-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .instagram-follow-link {
+        margin-left: 0;
+    }
+
+    .instagram-preview-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .instagram-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .instagram-header h3 {
+        font-size: 20px;
+    }
+}

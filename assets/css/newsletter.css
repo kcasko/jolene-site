@@ -1,0 +1,240 @@
+/**
+ * Newsletter Signup Styles
+ */
+
+/* Newsletter Section */
+.newsletter-section {
+    background: linear-gradient(135deg, #2a1a3d 0%, #1a0f2e 100%);
+    border: 2px solid #8b7aa8;
+    border-radius: 12px;
+    padding: 40px 30px;
+    margin: 60px 0;
+    text-align: center;
+}
+
+.newsletter-section h2 {
+    color: #fffacd;
+    font-size: 28px;
+    margin: 0 0 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.newsletter-section p {
+    color: #d9cbe5;
+    font-size: 16px;
+    margin: 0 0 25px;
+    opacity: 0.9;
+}
+
+/* Newsletter Form */
+.newsletter-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 14px 18px;
+    border: 2px solid rgba(139, 122, 168, 0.3);
+    border-radius: 8px;
+    background: rgba(139, 122, 168, 0.1);
+    color: #d9cbe5;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: #8b7aa8;
+    background: rgba(139, 122, 168, 0.15);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(217, 203, 229, 0.5);
+}
+
+.newsletter-button {
+    padding: 14px 30px;
+    background: linear-gradient(135deg, #8b7aa8 0%, #6a5a88 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    font-family: inherit;
+}
+
+.newsletter-button:hover:not(:disabled) {
+    background: linear-gradient(135deg, #9b8ab8 0%, #7a6a98 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 122, 168, 0.4);
+}
+
+.newsletter-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Newsletter Message */
+.newsletter-message {
+    margin-top: 15px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: none;
+}
+
+.newsletter-message-success {
+    background: rgba(74, 222, 128, 0.1);
+    border: 1px solid rgba(74, 222, 128, 0.3);
+    color: #4ade80;
+}
+
+.newsletter-message-error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+    color: #ff6b6b;
+}
+
+/* Inline Newsletter Form (for footer, etc.) */
+.newsletter-inline {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.newsletter-inline h3 {
+    color: #fffacd;
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.newsletter-inline .newsletter-input-group {
+    max-width: 400px;
+}
+
+/* Newsletter Popup/Modal (if needed) */
+.newsletter-popup {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    max-width: 350px;
+    background: linear-gradient(135deg, #2a1a3d 0%, #1a0f2e 100%);
+    border: 2px solid #8b7aa8;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    animation: slideInUp 0.4s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.newsletter-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: #d9cbe5;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.newsletter-popup-close:hover {
+    background: rgba(139, 122, 168, 0.2);
+    color: #fff;
+}
+
+.newsletter-popup h3 {
+    color: #fffacd;
+    font-size: 20px;
+    margin: 0 0 10px;
+    padding-right: 30px;
+}
+
+.newsletter-popup p {
+    color: #d9cbe5;
+    font-size: 14px;
+    margin: 0 0 15px;
+}
+
+.newsletter-popup .newsletter-input-group {
+    flex-direction: column;
+}
+
+.newsletter-popup .newsletter-button {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .newsletter-section {
+        padding: 30px 20px;
+        margin: 40px 0;
+    }
+
+    .newsletter-section h2 {
+        font-size: 24px;
+    }
+
+    .newsletter-input-group {
+        flex-direction: column;
+    }
+
+    .newsletter-button {
+        width: 100%;
+    }
+
+    .newsletter-popup {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        max-width: none;
+    }
+}
+
+/* Privacy Notice */
+.newsletter-privacy {
+    font-size: 12px;
+    color: rgba(217, 203, 229, 0.6);
+    margin-top: 10px;
+}
+
+.newsletter-privacy a {
+    color: #fffacd;
+    text-decoration: underline;
+}
+
+.newsletter-privacy a:hover {
+    color: #fff;
+}

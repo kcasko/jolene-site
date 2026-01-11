@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="assets/css/navigation.css">
     <link rel="stylesheet" href="assets/css/gallery.css">
     <link rel="stylesheet" href="assets/css/lightbox.css">
+    <link rel="stylesheet" href="assets/css/newsletter.css">
+    <link rel="stylesheet" href="assets/css/instagram-feed.css">
 </head>
 <body>
     <!-- Skip to content link for accessibility -->
@@ -147,6 +149,32 @@
                 </div>
             </div>
 
+            <!-- Instagram Feed -->
+            <div class="instagram-feed">
+                <!-- Populated by instagram-feed.js -->
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="newsletter-section">
+                <h2>Stay Updated</h2>
+                <p>Get notified when new artwork drops, commission slots open, or exclusive prints become available.</p>
+                <form class="newsletter-form" data-source="homepage">
+                    <div class="newsletter-input-group">
+                        <input type="email"
+                               name="email"
+                               class="newsletter-input"
+                               placeholder="Your email address"
+                               required
+                               aria-label="Email address">
+                        <button type="submit" class="newsletter-button">Subscribe</button>
+                    </div>
+                    <div class="newsletter-message"></div>
+                    <p class="newsletter-privacy">
+                        No spam. Unsubscribe anytime. See <a href="legal/privacy.html">Privacy Policy</a>.
+                    </p>
+                </form>
+            </div>
+
             <!-- Social platforms -->
             <div class="section">
                 <h2 class="section-title">Find Me Online</h2>
@@ -227,6 +255,9 @@
 
     <!-- JavaScript -->
     <script src="assets/js/content-loader.js"></script>
+    <script src="assets/js/seo-enhancer.js"></script>
+    <script src="assets/js/newsletter.js"></script>
+    <script src="assets/js/instagram-feed.js"></script>
     <script src="assets/js/navigation.js"></script>
     <script src="assets/js/gallery-filter.js"></script>
     <script src="assets/js/lightbox.js"></script>

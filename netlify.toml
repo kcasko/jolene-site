@@ -8,6 +8,11 @@
 
 # Redirect rules
 [[redirects]]
+  from = "/sitemap.xml"
+  to = "/.netlify/functions/generate-sitemap"
+  status = 200
+
+[[redirects]]
   from = "/shop/checkout"
   to = "/.netlify/functions/create-checkout-session"
   status = 200
