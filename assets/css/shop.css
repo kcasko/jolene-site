@@ -1,4 +1,4 @@
-/* Shop Page Styles - Product grid and purchase options */
+/* Shop Page Styles - Platform links and product grid */
 
 .shop-intro {
     text-align: center;
@@ -7,6 +7,43 @@
     color: #d9cbe5;
     font-size: 1.05em;
     line-height: 1.8;
+}
+
+/* Platform links section */
+.shop-platforms {
+    margin-bottom: 60px;
+}
+
+.shop-platforms .platforms {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.shop-platforms .platform-link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+}
+
+.shop-platforms .platform-icon {
+    font-size: 2.5em;
+    flex-shrink: 0;
+}
+
+.shop-platforms .platform-name {
+    color: #fffacd;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.shop-platforms .platform-desc {
+    color: #d9cbe5;
+    font-size: 0.95em;
+    line-height: 1.6;
 }
 
 .product-grid {
@@ -22,8 +59,8 @@
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .product-card:hover {
@@ -242,6 +279,27 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+    .shop-platforms .platforms {
+        padding: 0 15px;
+    }
+
+    .shop-platforms .platform-link {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .shop-platforms .platform-icon {
+        font-size: 2em;
+    }
+
+    .shop-platforms .platform-name {
+        font-size: 1.15em;
+    }
+
+    .shop-platforms .platform-desc {
+        font-size: 0.9em;
+    }
+
     .product-grid {
         grid-template-columns: 1fr;
         gap: 25px;

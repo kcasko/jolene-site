@@ -11,8 +11,8 @@
     border-radius: 20px;
     padding: 40px;
     margin-bottom: 40px;
-    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 }
 
 .form-section h2 {
@@ -276,6 +276,19 @@
     color: #d9cbe5;
     font-size: 0.9em;
     line-height: 1.6;
+}
+
+/* Commission pricing note */
+.pricing-note {
+    text-align: center;
+    color: #b8a9c9;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Textarea with specific height */
+.form-textarea.min-height-100 {
+    min-height: 100px;
 }
 
 /* Responsive */

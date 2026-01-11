@@ -799,3 +799,25 @@ h1 {
     /* Scale down background elements on mobile */
     .celestial { transform: scale(0.65); opacity: 0.28; }
 }
+
+/* Blockquote styling for artist statement */
+.about-section blockquote,
+blockquote.artist-statement {
+    border-left: 3px solid rgba(255, 250, 205, 0.3);
+    padding-left: 25px;
+    font-style: italic;
+    color: #d9cbe5;
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin: 20px 0;
+}
+
+/* Legal link styling */
+a.legal-link {
+    color: #fffacd;
+    text-decoration: underline;
+}
+
+a.legal-link:hover {
+    color: #fff;
+}
