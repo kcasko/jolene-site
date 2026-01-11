@@ -75,20 +75,10 @@
                 </p>
             </div>
 
-            <!-- Blog posts grid - Coming Soon placeholder -->
+            <!-- Blog posts grid - Dynamically populated from content/blog-posts.json -->
             <section class="section">
-                <div class="blog-empty">
-                    <h2>Coming Soon</h2>
-                    <p style="color: #d9cbe5; font-size: 1.1em; margin-bottom: 20px;">
-                        Blog posts about creative process, album art stories, and artistic inspiration are on the way.
-                    </p>
-                    <p style="color: #b8a9c9;">
-                        Subscribe to the newsletter to be notified when the first post goes live.
-                    </p>
-                </div>
-
-                <!-- Example blog post cards (hidden for now, will be shown when blog is active) -->
-                <div class="blog-grid" style="display: none;">
+                <div class="blog-grid">
+                    <!-- Content loaded by blog-loader.js -->
                     <!-- Example Post 1 -->
                     <article class="blog-post-card">
                         <img src="assets/images/blog/process.jpg" alt="Creative process" class="blog-featured-image">
@@ -147,6 +137,8 @@
     </main>
 
     <!-- JavaScript -->
+    <script src="assets/js/blog-loader.js"></script>
+    <script src="assets/js/seo-enhancer.js"></script>
     <script src="assets/js/navigation.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
     "title": "Jolene Casko - Digital Collage Artist",
     "description": "Surreal digital collages inspired by music, poetry, and emotion. Specializing in album art for musicians.",
     "author": "Jolene Casko",
-    "url": "https://jolene.taurustech.me",
+    "url": "https://jolenecasko.netlify.app",
     "email": "jolenecasko@gmail.com",
     "location": "Greensburg, Pennsylvania, USA"
   },
@@ -38,7 +38,7 @@
   },
   "features": {
     "newsletter": true,
-    "blog": false,
+    "blog": true,
     "shop": true,
     "commissions": true,
     "analytics": true

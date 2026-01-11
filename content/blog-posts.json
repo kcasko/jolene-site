@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": "welcome-to-my-digital-collage-journey",
+      "title": "Welcome to My Digital Collage Journey",
+      "slug": "welcome-to-my-digital-collage-journey",
+      "excerpt": "An introduction to my art, process, and what inspires me to create surreal digital collages.",
+      "content": "Welcome to my corner of the internet where digital collage meets emotion, music, and surrealism. I'm Jolene, and I've been creating digital collages for over 20 years.\n\nMy work is deeply influenced by music—particularly the emotional landscapes that songs create. When musicians reach out for album art, we're not just creating a cover; we're translating sound into visual emotion.\n\nEach piece starts with listening. I immerse myself in the track or album, letting the mood, lyrics, and instrumentation guide the imagery. From there, it's about finding the perfect vintage photographs, textures, and elements that capture that feeling.\n\nThis blog will be a space where I share my creative process, thoughts on art and music, behind-the-scenes looks at commissions, and tutorials for fellow digital artists. Stay tuned for more!",
+      "author": "Jolene Casko",
+      "datePublished": "2025-01-10",
+      "dateModified": "2025-01-10",
+      "featured": true,
+      "category": "Process",
+      "tags": ["introduction", "process", "digital collage", "music"],
+      "image": {
+        "url": "/assets/images/artworks/499224803_1298277118970954_217332104034590816_n.jpg",
+        "alt": "Lunar Dreams collage with vintage portrait and moons"
+      },
+      "seo": {
+        "metaTitle": "Welcome to My Digital Collage Journey - Jolene Casko",
+        "metaDescription": "An introduction to my digital collage art, creative process, and what inspires me to create surreal artwork for musicians and art lovers.",
+        "keywords": ["digital collage", "creative process", "album art", "surreal art"]
+      },
+      "readTime": 3
+    }
+  ]
+}
