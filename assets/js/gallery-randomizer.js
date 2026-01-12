@@ -1,22 +1,13 @@
-// Gallery Randomizer - Randomly selects and displays images from artworks folder
-// This script loads a random selection of artwork images on each page load
+// Gallery Randomizer - Displays all images from artworks folder
+// This script loads all artwork images on the portfolio page
 
 (function() {
     'use strict';
 
-    // Configuration
-    const CONFIG = {
-        // Number of images to display per page load
-        // Portfolio: ALL images (full gallery)
-        displayCount: getDisplayCount(),
-
-        // Path to artworks folder
-        artworksPath: 'assets/images/artworks/',
-
-        // All available artwork image filenames
-        // To add new images: place them in /assets/images/artworks/ and add the filename to this array
-        // To remove images: delete the filename from this array
-        artworkFilenames: [
+    // All available artwork image filenames
+    // To add new images: place them in /assets/images/artworks/ and add the filename to this array
+    // To remove images: delete the filename from this array
+    const artworkFilenames = [
             '493321973_1283900423741957_2701660960632263180_n.jpg',
             '494179796_1283168297148503_343925693965200879_n.jpg',
             '494180536_1283624873769512_8378251948028318947_n.jpg',
@@ -278,18 +269,13 @@
             '605778244_1498143118984352_4169211359957295631_n.jpg',
             '607445863_1506690191462978_3869248880395752097_n.jpg',
             '608569667_1501199602012037_4283189655030080772_n.jpg'
-        ]
-    };
+    ];
 
-    /**
-     * Determine how many images to display based on the current page
-     * @returns {number} - Number of images to display
-     */
-    function getDisplayCount() {
-        // Portfolio shows ALL images
-        // This returns the full length, no limit
-        return CONFIG.artworkFilenames.length;
-    }
+    // Configuration
+    const CONFIG = {
+        artworksPath: 'assets/images/artworks/',
+        artworkFilenames: artworkFilenames
+    };
 
     // Initialize on page load
     document.addEventListener('DOMContentLoaded', initGallery);
@@ -301,40 +287,13 @@
         // Clear existing content
         gallery.innerHTML = '';
 
-        // Get random selection of images
-        const selectedImages = getRandomImages(CONFIG.displayCount);
-
-        // Render each image
-        selectedImages.forEach((filename, index) => {
+        // Render ALL images
+        artworkFilenames.forEach((filename, index) => {
             const galleryItem = createGalleryItem(filename, index);
             gallery.appendChild(galleryItem);
         });
 
-        console.log(`Gallery: Rendered ${selectedImages.length} random artworks`);
-    }
-
-    /**
-     * Fisher-Yates shuffle algorithm for random array shuffling
-     * @param {Array} array - Array to shuffle
-     * @returns {Array} - Shuffled array
-     */
-    function shuffleArray(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-    }
-
-    /**
-     * Get random selection of images from the artworks array
-     * @param {number} count - Number of images to select
-     * @returns {Array} - Array of randomly selected filenames
-     */
-    function getRandomImages(count) {
-        const shuffled = shuffleArray(CONFIG.artworkFilenames);
-        return shuffled.slice(0, Math.min(count, shuffled.length));
+        console.log(`Gallery: Rendered ${artworkFilenames.length} artworks`);
     }
 
     /**
