@@ -813,6 +813,13 @@ h1 {
 
     /* Scale down background elements on mobile */
     .celestial { transform: scale(0.65); opacity: 0.28; }
+
+    /* Fix section CTA button on mobile */
+    .section-cta .cta-button {
+        width: 100%;
+        max-width: 280px;
+        display: inline-block;
+    }
 }
 
 /* Blockquote styling for artist statement */
