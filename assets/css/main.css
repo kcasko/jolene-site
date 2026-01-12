@@ -217,6 +217,21 @@ body::after {
     box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
+.hero-image-container {
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    border: 2px solid rgba(255,250,205,0.2);
+}
+
 h1 {
     font-size: 3.5em;
     color: #fffacd;
