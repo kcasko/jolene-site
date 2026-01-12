@@ -273,7 +273,8 @@
     // Configuration
     const CONFIG = {
         artworksPath: 'assets/images/artworks/',
-        artworkFilenames: artworkFilenames
+        artworkFilenames: artworkFilenames,
+        displayCount: 30 // Number of random images to display
     };
 
     // Initialize on page load
@@ -286,13 +287,27 @@
         // Clear existing content
         gallery.innerHTML = '';
 
-        // Render ALL images
-        artworkFilenames.forEach((filename, index) => {
+        // Get random selection of images
+        const randomImages = getRandomImages(artworkFilenames, CONFIG.displayCount);
+
+        // Render random images
+        randomImages.forEach((filename, index) => {
             const galleryItem = createGalleryItem(filename, index);
             gallery.appendChild(galleryItem);
         });
 
-        console.log(`Gallery: Rendered ${artworkFilenames.length} artworks`);
+        console.log(`Gallery: Rendered ${randomImages.length} random artworks from ${artworkFilenames.length} total`);
+    }
+
+    /**
+     * Get random selection of images from array
+     * @param {Array} array - Source array
+     * @param {number} count - Number of items to select
+     * @returns {Array} - Random selection
+     */
+    function getRandomImages(array, count) {
+        const shuffled = [...array].sort(() => Math.random() - 0.5);
+        return shuffled.slice(0, count);
     }
 
     /**
