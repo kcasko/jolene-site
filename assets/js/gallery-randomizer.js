@@ -7,8 +7,7 @@
     // Configuration
     const CONFIG = {
         // Number of images to display per page load
-        // Homepage: 4 images (featured work teaser)
-        // Portfolio: 24 images (full gallery)
+        // Portfolio: ALL images (full gallery)
         displayCount: getDisplayCount(),
 
         // Path to artworks folder
@@ -287,12 +286,9 @@
      * @returns {number} - Number of images to display
      */
     function getDisplayCount() {
-        // Check if we're on the homepage
-        const path = window.location.pathname;
-        const isHomepage = path === '/' || path.endsWith('/index.html') || path.endsWith('/');
-
-        // Homepage gets 4 images, portfolio and other pages get 24
-        return isHomepage ? 4 : 24;
+        // Portfolio shows ALL images
+        // This returns the full length, no limit
+        return CONFIG.artworkFilenames.length;
     }
 
     // Initialize on page load
